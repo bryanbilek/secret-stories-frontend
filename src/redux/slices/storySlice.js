@@ -36,7 +36,7 @@ export const storySlice = createSlice({
 
 export const { getStories, getStory, addStory, updateStory, deleteStory, setLoading, setError } = storySlice.actions;
 export default storySlice.reducer;
-export const storySelector = state => state.stories;
+export const storySelector = state => state.story;
 
 export const getStoriesAsync = () => async (dispatch) => {
     try {
