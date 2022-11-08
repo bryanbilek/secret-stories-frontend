@@ -5,6 +5,7 @@ import { register } from '../redux/slices/userSlice';
 import { useNavigate, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import './register.css';
+import { BeatLoader } from 'react-spinners';
 
 const Register = () => {
     const [user, setUser] = useState({
@@ -35,6 +36,8 @@ const Register = () => {
         })
     }
 
+    if (!user) return <div style={{ textAlign: 'center'}}><BeatLoader color="darkred" /></div>
+
   return (
     <RegisterContainer>
         <h3>Register To Secret Stories</h3>
@@ -57,7 +60,7 @@ padding: 5% 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: grey;
+background-color: lightgrey;
 `
 
 const Button = styled.button`

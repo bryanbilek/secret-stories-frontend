@@ -12,13 +12,13 @@ const NavBar = () => {
   const dispatch = useDispatch();
 
   return (
-    <NavB>
-      <NavLogos>
+    <div className='nav-container'>
+      <div className='nav-logos'>
       <FaUserSecret />
       <SiStorybook />
       <NavName>Secret Stories</NavName>
-      </NavLogos>
-      <NavLinkGroup>
+      </div>
+      <div className='nav-link-group'>
       <Link to='/' className='nav-links'>
         Home
       </Link>
@@ -51,37 +51,15 @@ const NavBar = () => {
         Login
       </Link>
         </div>)}
-      </NavLinkGroup>
-    </NavB>
+      </div>
+    </div>
   );
 };
 
 export default NavBar;
 
 //styling
-const NavB = styled.nav`
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 2%;
-background-color: black;
-color: white;
-`
-
-const NavLogos = styled.div`
-width: 50%;
-margin-left: 2%;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-`
 
 const NavName = styled.p`
 margin-left: 2%;
-`
-
-const NavLinkGroup = styled.div`
-width: 30%;
-display: flex;
-justify-content: space-around;
 `

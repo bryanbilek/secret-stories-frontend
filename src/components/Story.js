@@ -4,6 +4,7 @@ import { getStoryAsync, storySelector, deleteStoryAsync, getStory } from '../red
 import { useNavigate, useParams } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
 import styled from 'styled-components';
+import { BeatLoader } from 'react-spinners';
 
 const Story = () => {
     const { story } = useSelector(storySelector);
@@ -25,7 +26,7 @@ const Story = () => {
         navigate(`/stories/${storyId}/update-story`);
     }
 
-    if (!story) return <p>Loading...</p>;
+    if (!story) return <div style={{ textAlign: 'center'}}><BeatLoader color="darkred" /></div>
 
     //decode the token to get the username property off it to assign as a story's author
     const token = localStorage.getItem('user');
@@ -54,7 +55,7 @@ padding: 5% 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: grey;
+background-color: lightgrey;
 `
 
 const Button = styled.button`

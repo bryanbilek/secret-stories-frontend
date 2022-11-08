@@ -8,3 +8,44 @@
     color: darkred;
     transform: scale(1.1);
   }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  background-color: black;
+  color: white;
+}
+
+.nav-logos {
+  width: 50%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-link-group {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 450px) {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+  }
+
+  .nav-logos {
+    justify-content: center;
+  }
+
+  .nav-link-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

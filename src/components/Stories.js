@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getStoriesAsync, storySelector } from '../redux/slices/storySlice';
 import styled from 'styled-components';
 import './stories.css';
+import { BeatLoader } from 'react-spinners';
 
 const Stories = () => {
     const { stories } = useSelector(storySelector);
@@ -18,7 +19,7 @@ const Stories = () => {
         navigate('add-story');
     }
 
-    if (!stories) return <p>Loading...</p>;
+    if (!stories) return <div style={{ textAlign: 'center'}}><BeatLoader color="darkred" /></div>
 
   return (
     <StoriesContainer>
@@ -43,7 +44,7 @@ padding: 5% 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: grey;
+background-color: lightgrey;
 `
 
 const Button = styled.button`

@@ -49,7 +49,7 @@ padding: 5% 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: grey;
+background-color: lightgrey;
 `
 
 const Button = styled.button`

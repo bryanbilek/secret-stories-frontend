@@ -19,7 +19,7 @@ export default Home
 //styling
 const HomeDiv = styled.div`
 text-align: center;
-background-color: grey;
+background-color: lightgrey;
 padding: 20% 0;
 `
 

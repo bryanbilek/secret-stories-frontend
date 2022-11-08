@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { login } from '../redux/slices/userSlice';
 import styled from 'styled-components';
 import './login.css';
+import { BeatLoader } from 'react-spinners';
 
 const Login = () => {
     const [user, setUser] = useState({
@@ -34,6 +35,8 @@ const Login = () => {
         })
     }
 
+    if (!user) return <div style={{ textAlign: 'center'}}><BeatLoader color="darkred" /></div>
+
   return (
     <LoginContainer>
         <h3>Login To Secret Stories</h3>
@@ -56,7 +59,7 @@ padding: 5% 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: grey;
+background-color: lightgrey;
 `
 
 const Button = styled.button`
