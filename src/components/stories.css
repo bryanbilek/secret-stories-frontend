@@ -1,0 +1,9 @@
+.story-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: darkred;
+}
+
+.story-link:hover {
+    color: gold;
+}

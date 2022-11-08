@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { getStoriesAsync, storySelector } from '../redux/slices/storySlice';
+import styled from 'styled-components';
+import './stories.css';
 
 const Stories = () => {
     const { stories } = useSelector(storySelector);
@@ -19,18 +21,38 @@ const Stories = () => {
     if (!stories) return <p>Loading...</p>;
 
   return (
-    <div>
-        <h1>Stories</h1>
-        <button onClick={handleClick}>+ Add Story</button>
+    <StoriesContainer>
+        <h1>Secret Stories</h1>
+        <Button onClick={handleClick}>Add Story +</Button>
         {stories.map(story => (
             <div key={story._id}>
-                <Link to={`${story._id}`} className='story'>
+                <Link className='story-link' to={`${story._id}`}>
                     <h1>{story.title}</h1>
                 </Link>
             </div>
         ))}
-    </div>
+    </StoriesContainer>
   )
 }
 
 export default Stories
+
+//styling
+const StoriesContainer = styled.div`
+padding: 5% 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: grey;
+`
+
+const Button = styled.button`
+background-color: black;
+color: white;
+border-radius: 5%;
+&:hover {
+  color: darkred;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+`

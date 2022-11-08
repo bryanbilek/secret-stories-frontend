@@ -1,0 +1,10 @@
+.nav-links {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-links:hover {
+    color: darkred;
+    transform: scale(1.1);
+  }

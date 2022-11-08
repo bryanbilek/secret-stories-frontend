@@ -1,0 +1,15 @@
+.register-link {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .register-link:hover {
+    color: darkred;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+  }
