@@ -74,7 +74,7 @@ color: darkred;
 `
 
 const Author = styled.p`
-color: gold;
+color: yellow;
 `
 
 const Body = styled.h3`
